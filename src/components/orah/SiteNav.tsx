@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { useCartStore } from "@/stores/cartStore";
 
 const LINKS = [
   { to: "/collection", label: "Collection" },
@@ -10,6 +11,10 @@ const LINKS = [
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
+  const totalItems = useCartStore((s) =>
+    s.items.reduce((sum, i) => sum + i.quantity, 0),
+  );
+  const openCart = useCartStore((s) => s.openCart);
 
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 12);
@@ -57,18 +62,23 @@ export function SiteNav() {
             </Link>
           ))}
           <button
-            aria-label="Panier"
-            className="text-[11px] uppercase tracking-[0.24em] text-ink-soft hover:text-ink transition"
+            onClick={openCart}
+            aria-label={`Panier, ${totalItems} pièce${totalItems > 1 ? "s" : ""}`}
+            className="link-underline text-[11px] uppercase tracking-[0.24em] text-ink-soft hover:text-ink transition"
           >
-            Panier <span className="ml-1 text-brass-deep">(0)</span>
+            Panier{" "}
+            <span className="ml-1 tabular-nums text-brass-deep">
+              ({totalItems})
+            </span>
           </button>
         </nav>
 
         <button
+          onClick={openCart}
           className="md:hidden text-[11px] uppercase tracking-[0.24em] text-ink"
-          aria-label="Menu"
+          aria-label="Ouvrir le panier"
         >
-          Menu
+          Panier ({totalItems})
         </button>
       </div>
     </header>

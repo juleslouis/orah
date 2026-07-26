@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/orah/SiteFooter";
 import { Reveal } from "@/components/orah/Reveal";
 import { PRODUCTS, productBySlug } from "@/data/products";
 import { useState } from "react";
+import { useCartStore } from "@/stores/cartStore";
 
 export const Route = createFileRoute("/produit/$slug")({
   loader: ({ params }) => {
@@ -44,6 +45,20 @@ function ProductPage() {
   const { product } = Route.useLoaderData();
   const [tab, setTab] = useState<(typeof TABS)[number]["key"]>("matiere");
   const related = PRODUCTS.filter((p) => p.slug !== product.slug).slice(0, 3);
+  const addItem = useCartStore((s) => s.addItem);
+  const isLoading = useCartStore((s) => s.isLoading);
+
+  const handleAdd = () =>
+    addItem({
+      variantId: product.shopifyVariantId,
+      slug: product.slug,
+      name: product.name,
+      category: product.category,
+      image: product.image,
+      price: product.price,
+      currency: product.currency,
+    });
+
 
   return (
     <div className="bg-paper text-ink">
@@ -94,8 +109,12 @@ function ProductPage() {
               </div>
             )}
 
-            <button className="mt-10 w-full border border-ink bg-ink py-5 text-[11px] uppercase tracking-[0.32em] text-paper transition-colors duration-500 hover:bg-brass-deep hover:border-brass-deep">
-              Ajouter au panier
+            <button
+              onClick={handleAdd}
+              disabled={isLoading}
+              className="mt-10 w-full border border-ink bg-ink py-5 text-[11px] uppercase tracking-[0.32em] text-paper transition-colors duration-500 hover:bg-brass-deep hover:border-brass-deep disabled:opacity-60"
+            >
+              {isLoading ? "Un instant…" : "Ajouter au panier"}
             </button>
             <button className="mt-3 w-full border border-ink/30 py-5 text-[11px] uppercase tracking-[0.32em] text-ink transition-colors duration-500 hover:border-ink">
               Demander une gravure
