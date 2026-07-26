@@ -9,6 +9,7 @@ export type Product = {
   image: string;
   edition?: string;
   description: string;
+  shopifyVariantId: string; // gid://shopify/ProductVariant/xxx
 };
 
 import hero from "@/assets/orah-hero.jpg";
@@ -28,6 +29,7 @@ export const PRODUCTS: Product[] = [
     edition: "Édition ouverte",
     description:
       "Neuf branches tournées à la main, patine chaude obtenue par oxydation lente. Chaque pièce porte la signature de l'atelier à sa base.",
+    shopifyVariantId: "gid://shopify/ProductVariant/58686249271621",
   },
   {
     slug: "mezouza-shin",
@@ -41,6 +43,7 @@ export const PRODUCTS: Product[] = [
     edition: "Certificat de cacherout inclus",
     description:
       "Un fût cylindrique sobre, coiffé d'un chapiteau ciselé. La lettre שׁ est gravée à la fraise, remplie à l'or fin.",
+    shopifyVariantId: "gid://shopify/ProductVariant/58686249369925",
   },
   {
     slug: "kiddouch-havdala",
@@ -54,6 +57,7 @@ export const PRODUCTS: Product[] = [
     edition: "Gravure incluse",
     description:
       "Une coupe à pied haut, contenance rituelle exacte. Le pourtour intérieur est doré pour préserver la couleur du vin.",
+    shopifyVariantId: "gid://shopify/ProductVariant/58686249402693",
   },
 ];
 
