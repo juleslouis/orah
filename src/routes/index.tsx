@@ -56,34 +56,37 @@ function Hero() {
         height={1808}
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-paper/10 via-transparent to-paper/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-paper/30 via-transparent to-transparent md:from-paper/40" />
+      <div className="absolute inset-0 bg-navy/55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-navy/40" />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-6 pb-24 pt-40 md:px-12 md:pb-32">
-        <div className="max-w-2xl reveal-slow">
-          <div className="eyebrow text-ink-soft">Maison — Fondée 5785</div>
-          <h1 className="heading-hero mt-8 text-[52px] text-ink md:text-[92px]">
-            La lumière
+      <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-center px-6 pb-24 pt-40 md:px-12">
+        <div className="reveal-slow mx-auto max-w-[900px] text-center">
+          <div className="text-[26px] font-light uppercase leading-tight tracking-[0.16em] text-paper/60 md:text-[40px]">
+            Le monde d'ORAH
+          </div>
+          <div className="mt-3 font-display text-[34px] italic leading-tight text-brass md:text-[56px]">
+            La lumière qui se transmet
+          </div>
+        </div>
+
+        <div className="reveal-slow mt-24 max-w-xl md:mt-32">
+          <div className="eyebrow text-brass">Maison — Fondée 5785</div>
+          <h1 className="heading-hero mt-6 text-[34px] text-paper md:text-[52px]">
+            Orfèvrerie rituelle
             <br />
-            <span className="italic text-ink-soft">qui se transmet.</span>
+            de transmission
           </h1>
-          <p className="body-text mt-8 max-w-md md:text-[17px]">
-            Une maison contemporaine d'objets rituels. Orfèvrerie de
-            transmission, faite pour trois générations.
+          <p className="mt-6 max-w-md text-[15px] leading-relaxed text-paper/75">
+            Hanoukkia, mezouza, argenterie de kiddouch. Trois ateliers, une
+            seule main, trois générations.
           </p>
-          <div className="mt-12 flex flex-wrap items-center gap-8">
-            <Link
-              to="/collection"
-              className="label group inline-flex items-center gap-4 border-b border-ink/60 pb-2 text-ink transition-colors hover:text-brass-deep hover:border-brass-deep"
-            >
+          <div className="mt-10 flex flex-wrap items-center gap-6">
+            <Link to="/collection" className="btn-pill-light">
               Découvrir la collection
-              <span className="transition-transform duration-700 group-hover:translate-x-2">
-                ⟶
-              </span>
             </Link>
             <Link
               to="/about"
-              className="link-underline label text-ink-muted hover:text-ink"
+              className="link-underline label text-paper/70 hover:text-paper"
             >
               La maison
             </Link>
@@ -91,9 +94,10 @@ function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-[10px] uppercase tracking-[0.18em] text-ink-muted flicker">
+      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-[10px] uppercase tracking-[0.22em] text-paper/60 flicker">
         Scroll
       </div>
+
     </section>
   );
 }
