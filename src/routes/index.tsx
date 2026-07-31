@@ -185,15 +185,15 @@ function IconicPieces() {
           </div>
         </Reveal>
 
-        <div className="mt-20 grid gap-x-8 gap-y-16 md:grid-cols-3">
+        <div className="mt-20 grid gap-x-4 gap-y-16 md:grid-cols-3">
           {PRODUCTS.map((p, i) => (
             <Reveal key={p.slug} delay={i * 140}>
               <Link
                 to="/produit/$slug"
                 params={{ slug: p.slug }}
-                className="group block"
+                className="group block px-4 py-8 text-center transition-colors duration-700 hover:bg-stone"
               >
-                <div className="relative aspect-[3/4] overflow-hidden bg-stone">
+                <div className="relative aspect-[4/5] overflow-hidden">
                   <img
                     src={p.image}
                     alt={p.name}
@@ -201,22 +201,23 @@ function IconicPieces() {
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-[2400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
                   />
                 </div>
-                <div className="mt-6 flex items-baseline justify-between gap-4">
-                  <div>
-                    <div className="eyebrow">{p.category}</div>
-                    <h3 className="heading-card mt-2 text-[22px] text-ink">
-                      {p.name}
-                    </h3>
+                <div className="mt-8">
+                  <div className="eyebrow">{p.category}</div>
+                  <h3 className="heading-card mt-3 text-[17px] text-ink">
+                    {p.name}
+                  </h3>
+                  <div className="mt-3 text-[13px] text-ink-muted">
+                    {p.material}
                   </div>
-                  <div className="font-display text-[18px] text-ink-soft tabular-nums">
+                  <div className="mt-4 font-display text-[19px] tabular-nums text-brass-deep">
                     {p.price.toLocaleString("fr-FR")} {p.currency}
                   </div>
                 </div>
-                <div className="mt-3 h-px w-0 bg-brass transition-all duration-1000 group-hover:w-full" />
               </Link>
             </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );
