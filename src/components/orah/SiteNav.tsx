@@ -53,7 +53,7 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-12">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-3 md:px-12">
           {/* Menu */}
           <button
             onClick={() => setMenuOpen(true)}
@@ -74,17 +74,16 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
             className="absolute left-1/2 flex -translate-x-1/2 flex-col items-center"
             aria-label="ORAH — accueil"
           >
-            <OrahEmblem className="h-7 w-7 text-brass" />
-            <span className={`mt-2 font-sans text-[15px] font-light leading-none tracking-[0.34em] ${tone} md:text-[17px]`}>
+            <OrahEmblem className="h-6 w-6 text-brass" />
+            <span className={`mt-1.5 font-sans text-[13px] font-light leading-none tracking-[0.32em] ${tone} md:text-[15px]`}>
               ORAH
             </span>
-            <span className={`mt-1 text-[8px] uppercase tracking-[0.4em] ${toneSoft}`}>
+            <span className={`mt-0.5 text-[7px] uppercase tracking-[0.35em] ${toneSoft}`}>
               Jérusalem
             </span>
           </Link>
 
-          {/* Cart */}
-          <button
+          {/* Cart */
             onClick={openCart}
             aria-label={`Panier, ${totalItems} pièce${totalItems > 1 ? "s" : ""}`}
             className={`flex items-center gap-2 ${tone} transition-colors hover:text-brass-deep`}
