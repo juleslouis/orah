@@ -105,7 +105,7 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
           aria-label="Navigation principale"
           className="fixed inset-0 z-[90] flex"
         >
-          <div className="reveal-slow relative z-10 flex w-full flex-col bg-paper px-6 py-5 md:w-[42%] md:px-12">
+          <div className="relative z-10 flex w-full flex-col bg-paper px-6 py-5 md:w-[42%] md:px-12">
             <div className="flex items-center justify-between">
               <button
                 onClick={() => setMenuOpen(false)}
@@ -120,7 +120,7 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
               </span>
             </div>
 
-            <nav className="mt-20 flex flex-col md:mt-28">
+            <nav className="reveal-slow mt-20 flex flex-col md:mt-28">
               <span className="font-display text-2xl italic text-ink-muted">
                 <Link to="/" onClick={() => setMenuOpen(false)}>
                   Accueil
