@@ -53,17 +53,17 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-3 md:px-12">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 md:px-12">
           {/* Menu */}
           <button
             onClick={() => setMenuOpen(true)}
             className={`label flex items-center gap-4 ${tone} transition-colors hover:text-brass-deep`}
             aria-label="Ouvrir le menu"
           >
-            <span className="flex flex-col gap-[7px]" aria-hidden>
-              <span className="block h-[2px] w-7 bg-current" />
-              <span className="block h-[2px] w-7 bg-current" />
-              <span className="block h-[2px] w-7 bg-current" />
+            <span className="flex flex-col gap-[8px]" aria-hidden>
+              <span className="block h-[2px] w-8 bg-current" />
+              <span className="block h-[2px] w-8 bg-current" />
+              <span className="block h-[2px] w-8 bg-current" />
             </span>
             <span className="hidden sm:inline">Menu</span>
           </button>
@@ -74,11 +74,11 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
             className="absolute left-1/2 mt-1 flex -translate-x-1/2 flex-col items-center"
             aria-label="ORAH — accueil"
           >
-            <OrahEmblem className="h-6 w-6 text-brass" />
-            <span className={`mt-2 font-sans text-[13px] font-light leading-none tracking-[0.32em] ${tone} md:text-[15px]`}>
+            <OrahEmblem className="h-7 w-7 text-brass" />
+            <span className={`mt-2.5 font-sans text-[14px] font-light leading-none tracking-[0.32em] ${tone} md:text-[16px]`}>
               ORAH
             </span>
-            <span className={`mt-1 text-[7px] uppercase tracking-[0.35em] ${toneSoft}`}>
+            <span className={`mt-1 text-[8px] uppercase tracking-[0.35em] ${toneSoft}`}>
               Jérusalem
             </span>
           </Link>
