@@ -53,11 +53,11 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 md:px-12">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center px-6 py-4 md:px-12">
           {/* Menu */}
           <button
             onClick={() => setMenuOpen(true)}
-            className={`label flex items-center gap-4 ${tone} transition-colors hover:text-brass-deep`}
+            className={`label flex items-center gap-4 justify-self-start ${tone} transition-colors hover:text-brass-deep`}
             aria-label="Ouvrir le menu"
           >
             <span className="flex flex-col gap-[8px]" aria-hidden>
@@ -71,7 +71,7 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
           {/* Emblem */}
           <Link
             to="/"
-            className="absolute left-1/2 mt-1 flex -translate-x-1/2 flex-col items-center"
+            className="flex flex-col items-center"
             aria-label="ORAH — accueil"
           >
             <OrahEmblem className="h-7 w-7 text-brass" />
@@ -87,7 +87,7 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
           <button
             onClick={openCart}
             aria-label={`Panier, ${totalItems} pièce${totalItems > 1 ? "s" : ""}`}
-            className={`flex items-center gap-2 ${tone} transition-colors hover:text-brass-deep`}
+            className={`flex items-center gap-2 justify-self-end ${tone} transition-colors hover:text-brass-deep`}
           >
             <ShoppingBag className="h-[19px] w-[19px]" strokeWidth={1.1} />
             <span className="label tabular-nums text-brass-deep">
