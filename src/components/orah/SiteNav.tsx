@@ -53,7 +53,7 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-3 md:px-12">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-2 md:px-12">
           {/* Menu */}
           <button
             onClick={() => setMenuOpen(true)}
@@ -71,14 +71,14 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
           {/* Emblem */}
           <Link
             to="/"
-            className="absolute left-1/2 flex -translate-x-1/2 flex-col items-center"
+            className="absolute left-1/2 mt-1 flex -translate-x-1/2 flex-col items-center"
             aria-label="ORAH — accueil"
           >
-            <OrahEmblem className="h-6 w-6 text-brass" />
-            <span className={`mt-1.5 font-sans text-[13px] font-light leading-none tracking-[0.32em] ${tone} md:text-[15px]`}>
+            <OrahEmblem className="h-5 w-5 text-brass" />
+            <span className={`mt-1 font-sans text-[12px] font-light leading-none tracking-[0.32em] ${tone} md:text-[14px]`}>
               ORAH
             </span>
-            <span className={`mt-0.5 text-[7px] uppercase tracking-[0.35em] ${toneSoft}`}>
+            <span className={`text-[7px] uppercase tracking-[0.35em] ${toneSoft}`}>
               Jérusalem
             </span>
           </Link>
