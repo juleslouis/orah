@@ -83,7 +83,8 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
             </span>
           </Link>
 
-          {/* Cart */
+          {/* Cart */}
+          <button
             onClick={openCart}
             aria-label={`Panier, ${totalItems} pièce${totalItems > 1 ? "s" : ""}`}
             className={`flex items-center gap-2 ${tone} transition-colors hover:text-brass-deep`}
