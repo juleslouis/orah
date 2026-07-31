@@ -4,10 +4,12 @@ import { useCartStore } from "@/stores/cartStore";
 
 const LINKS = [
   { to: "/collection", label: "Collection" },
+  { to: "/lookbook", label: "Lookbook" },
   { to: "/journal", label: "Journal" },
   { to: "/about", label: "Maison" },
   { to: "/contact", label: "Contact" },
 ] as const;
+
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
