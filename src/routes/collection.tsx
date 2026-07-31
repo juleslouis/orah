@@ -65,13 +65,14 @@ function CollectionPage() {
                 <div className="mt-6 flex items-baseline justify-between gap-4">
                   <div>
                     <div className="eyebrow">{p.category}</div>
-                    <h3 className="heading-card mt-2 text-[22px] text-ink">
+                    <h3 className="heading-card mt-2 text-[17px] text-ink">
                       {p.name}
                     </h3>
                   </div>
-                  <div className="font-display text-[18px] text-ink-soft tabular-nums">
+                  <div className="whitespace-nowrap font-display text-[19px] tabular-nums text-brass-deep">
                     {p.price.toLocaleString("fr-FR")} {p.currency}
                   </div>
+
                 </div>
               </Link>
             </Reveal>
