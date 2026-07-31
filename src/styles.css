@@ -82,7 +82,8 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
     font-weight: 400;
-    letter-spacing: 0.005em;
+    letter-spacing: 0.01em;
+    line-height: 1.65;
   }
 
   ::selection {
@@ -93,8 +94,28 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 500;
-    letter-spacing: -0.015em;
     color: var(--ink);
+    line-height: 1.1;
+  }
+
+  h1 {
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    letter-spacing: -0.022em;
+  }
+
+  h3 {
+    letter-spacing: -0.015em;
+  }
+
+  h4 {
+    letter-spacing: -0.01em;
+  }
+
+  p, ul, ol {
+    line-height: 1.65;
   }
 }
 
@@ -104,9 +125,44 @@
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-muted);
+}
+
+@utility heading-hero {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+@utility heading-section {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.022em;
+}
+
+@utility heading-card {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+@utility body-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+@utility label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 @utility rule-gold {
@@ -119,6 +175,18 @@
     transparent 100%
   );
   height: 1px;
+}
+
+@utility measure-narrow {
+  max-width: 28ch;
+}
+
+@utility measure {
+  max-width: 42ch;
+}
+
+@utility measure-wide {
+  max-width: 56ch;
 }
 
 @utility link-underline {
