@@ -92,11 +92,11 @@ function ProductPage() {
         <div className="md:col-span-5 md:sticky md:top-32 md:self-start">
           <Reveal>
             <div className="eyebrow">{product.category}</div>
-            <h1 className="mt-6 font-display text-[40px] leading-[1] tracking-[-0.015em] md:text-[56px]">
+            <h1 className="heading-section mt-6 text-[40px] md:text-[56px]">
               {product.name}
             </h1>
             <div className="mt-6 h-px w-10 rule-gold" />
-            <p className="mt-8 text-[15px] leading-[1.8] text-ink-soft">
+            <p className="body-text mt-8">
               {product.description}
             </p>
 
@@ -112,11 +112,11 @@ function ProductPage() {
             <button
               onClick={handleAdd}
               disabled={isLoading}
-              className="mt-10 w-full border border-ink bg-ink py-5 text-[11px] uppercase tracking-[0.32em] text-paper transition-colors duration-500 hover:bg-brass-deep hover:border-brass-deep disabled:opacity-60"
+              className="label mt-10 w-full border border-ink bg-ink py-5 text-paper transition-colors duration-500 hover:bg-brass-deep hover:border-brass-deep disabled:opacity-60"
             >
               {isLoading ? "Un instant…" : "Ajouter au panier"}
             </button>
-            <button className="mt-3 w-full border border-ink/30 py-5 text-[11px] uppercase tracking-[0.32em] text-ink transition-colors duration-500 hover:border-ink">
+            <button className="label mt-3 w-full border border-ink/30 py-5 text-ink transition-colors duration-500 hover:border-ink">
               Demander une gravure
             </button>
 
@@ -126,7 +126,7 @@ function ProductPage() {
                   <button
                     key={t.key}
                     onClick={() => setTab(t.key)}
-                    className={`text-[11px] uppercase tracking-[0.28em] transition-colors ${
+                    className={`label transition-colors ${
                       tab === t.key
                         ? "text-ink"
                         : "text-ink-muted hover:text-ink"
@@ -136,7 +136,7 @@ function ProductPage() {
                   </button>
                 ))}
               </div>
-              <div className="py-8 text-[14px] leading-[1.8] text-ink-soft">
+              <div className="body-text py-8 text-[14px]">
                 {tab === "matiere" && product.material}
                 {tab === "origine" && product.origin}
                 {tab === "livraison" &&
@@ -168,7 +168,7 @@ function ProductPage() {
                 />
               </div>
               <div className="mt-6 flex items-baseline justify-between">
-                <h3 className="font-display text-[20px]">{p.name}</h3>
+                <h3 className="heading-card text-[20px]">{p.name}</h3>
                 <div className="font-display text-[16px] text-ink-soft tabular-nums">
                   {p.price.toLocaleString("fr-FR")} {p.currency}
                 </div>
