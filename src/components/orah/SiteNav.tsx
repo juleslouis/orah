@@ -13,7 +13,7 @@ const LINKS = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-export function SiteNav() {
+export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const totalItems = useCartStore((s) =>
@@ -40,6 +40,10 @@ export function SiteNav() {
     };
   }, [menuOpen]);
 
+  const light = overlay && !scrolled;
+  const tone = light ? "text-paper" : "text-ink";
+  const toneSoft = light ? "text-paper/70" : "text-ink-muted";
+
   return (
     <>
       <header
@@ -53,7 +57,7 @@ export function SiteNav() {
           {/* Menu */}
           <button
             onClick={() => setMenuOpen(true)}
-            className="label flex items-center gap-4 text-ink transition-colors hover:text-brass-deep"
+            className={`label flex items-center gap-4 ${tone} transition-colors hover:text-brass-deep`}
             aria-label="Ouvrir le menu"
           >
             <span className="flex flex-col gap-[5px]" aria-hidden>
@@ -71,10 +75,10 @@ export function SiteNav() {
             aria-label="ORAH — accueil"
           >
             <OrahEmblem className="h-7 w-7 text-brass" />
-            <span className="mt-2 font-sans text-[15px] font-light leading-none tracking-[0.34em] text-ink md:text-[17px]">
+            <span className={`mt-2 font-sans text-[15px] font-light leading-none tracking-[0.34em] ${tone} md:text-[17px]`}>
               ORAH
             </span>
-            <span className="mt-1 text-[8px] uppercase tracking-[0.4em] text-ink-muted">
+            <span className={`mt-1 text-[8px] uppercase tracking-[0.4em] ${toneSoft}`}>
               Jérusalem
             </span>
           </Link>
@@ -83,7 +87,7 @@ export function SiteNav() {
           <button
             onClick={openCart}
             aria-label={`Panier, ${totalItems} pièce${totalItems > 1 ? "s" : ""}`}
-            className="flex items-center gap-2 text-ink transition-colors hover:text-brass-deep"
+            className={`flex items-center gap-2 ${tone} transition-colors hover:text-brass-deep`}
           >
             <ShoppingBag className="h-[19px] w-[19px]" strokeWidth={1.1} />
             <span className="label tabular-nums text-brass-deep">

@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="bg-paper text-ink">
-      <SiteNav />
+      <SiteNav overlay />
       <Hero />
       <Announcement />
       <Manifesto />

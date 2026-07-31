@@ -143,7 +143,7 @@ function Lookbook() {
 
   return (
     <div className="bg-paper text-ink">
-      <SiteNav />
+      <SiteNav overlay />
 
       {/* Hero */}
       <section className="relative flex min-h-[92vh] items-end overflow-hidden">
