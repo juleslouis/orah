@@ -37,7 +37,7 @@ export function SiteNav() {
             <Link
               key={l.to}
               to={l.to}
-              className="link-underline text-[11px] uppercase tracking-[0.24em] text-ink-soft hover:text-ink"
+              className="link-underline label text-ink-soft hover:text-ink"
             >
               {l.label}
             </Link>
@@ -45,7 +45,7 @@ export function SiteNav() {
         </nav>
 
         <Link to="/" className="flex flex-col items-center">
-          <span className="font-display text-[28px] leading-none tracking-[0.32em] text-ink md:text-[32px]">
+          <span className="font-display text-[28px] leading-none tracking-[0.18em] text-ink md:text-[32px]">
             ORAH
           </span>
           <span className="mt-1 h-px w-8 rule-gold" aria-hidden />
@@ -56,7 +56,7 @@ export function SiteNav() {
             <Link
               key={l.to}
               to={l.to}
-              className="link-underline text-[11px] uppercase tracking-[0.24em] text-ink-soft hover:text-ink"
+              className="link-underline label text-ink-soft hover:text-ink"
             >
               {l.label}
             </Link>
@@ -64,7 +64,7 @@ export function SiteNav() {
           <button
             onClick={openCart}
             aria-label={`Panier, ${totalItems} pièce${totalItems > 1 ? "s" : ""}`}
-            className="link-underline text-[11px] uppercase tracking-[0.24em] text-ink-soft hover:text-ink transition"
+            className="link-underline label text-ink-soft hover:text-ink transition"
           >
             Panier{" "}
             <span className="ml-1 tabular-nums text-brass-deep">
@@ -75,7 +75,7 @@ export function SiteNav() {
 
         <button
           onClick={openCart}
-          className="md:hidden text-[11px] uppercase tracking-[0.24em] text-ink"
+          className="label md:hidden text-ink"
           aria-label="Ouvrir le panier"
         >
           Panier ({totalItems})

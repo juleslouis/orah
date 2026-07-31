@@ -31,7 +31,7 @@ function CollectionPage() {
       <section className="mx-auto max-w-[1440px] px-6 pt-40 md:px-12 md:pt-56">
         <Reveal>
           <div className="eyebrow">Collection — Saison 5785</div>
-          <h1 className="mt-8 max-w-3xl font-display text-[44px] leading-[1] tracking-[-0.02em] md:text-[80px]">
+          <h1 className="heading-hero mt-8 max-w-3xl text-[44px] md:text-[80px]">
             Douze pièces.
             <br />
             <span className="italic text-ink-soft">Une seule main.</span>
@@ -57,7 +57,7 @@ function CollectionPage() {
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-[2400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
                   />
                   {p.edition && (
-                    <span className="absolute left-4 top-4 bg-paper/80 backdrop-blur px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-ink">
+                    <span className="absolute left-4 top-4 bg-paper/80 backdrop-blur px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-ink">
                       {p.edition}
                     </span>
                   )}
@@ -65,7 +65,7 @@ function CollectionPage() {
                 <div className="mt-6 flex items-baseline justify-between gap-4">
                   <div>
                     <div className="eyebrow">{p.category}</div>
-                    <h3 className="mt-2 font-display text-[22px] leading-tight text-ink">
+                    <h3 className="heading-card mt-2 text-[22px] text-ink">
                       {p.name}
                     </h3>
                   </div>

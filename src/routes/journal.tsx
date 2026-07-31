@@ -60,7 +60,7 @@ function Journal() {
       <section className="mx-auto max-w-[1200px] px-6 pt-40 md:px-12 md:pt-56">
         <Reveal>
           <div className="eyebrow">Journal — Automne 5785</div>
-          <h1 className="mt-8 font-display text-[44px] leading-[1] tracking-[-0.02em] md:text-[80px]">
+          <h1 className="heading-hero mt-8 text-[44px] md:text-[80px]">
             Rites, symboles,
             <br />
             <span className="italic text-ink-soft">ateliers.</span>
@@ -90,13 +90,13 @@ function Journal() {
                     <span>·</span>
                     <span>{a.time} de lecture</span>
                   </div>
-                  <h2 className="mt-6 font-display text-[32px] leading-[1.1] tracking-[-0.015em] md:text-[44px]">
+                  <h2 className="heading-section mt-6 text-[32px] md:text-[44px]">
                     {a.title}
                   </h2>
-                  <p className="mt-6 text-[15px] leading-[1.8] text-ink-soft">
+                  <p className="body-text mt-6">
                     {a.excerpt}
                   </p>
-                  <span className="mt-8 link-underline text-[11px] uppercase tracking-[0.28em] text-ink">
+                  <span className="link-underline label mt-8 text-ink">
                     Lire l'article ⟶
                   </span>
                 </div>

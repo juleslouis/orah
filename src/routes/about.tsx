@@ -55,7 +55,7 @@ function About() {
       <section className="mx-auto max-w-[1200px] px-6 pt-40 pb-24 md:px-12 md:pt-56">
         <Reveal>
           <div className="eyebrow">La Maison</div>
-          <h1 className="mt-10 font-display text-[44px] leading-[1] tracking-[-0.02em] md:text-[88px]">
+          <h1 className="heading-hero mt-10 text-[44px] md:text-[88px]">
             Fabriquer
             <br />
             <span className="italic text-ink-soft">ce qui restera.</span>
@@ -63,13 +63,13 @@ function About() {
         </Reveal>
         <Reveal delay={200}>
           <div className="mt-16 grid gap-16 md:grid-cols-2">
-            <p className="text-[15px] leading-[1.9] text-ink-soft">
+            <p className="body-text">
               ORAH tient dans une conviction simple : un objet à charge
               symbolique forte mérite le même soin qu'une pièce
               d'horlogerie. Les objets rituels ne sont pas des accessoires
               — ce sont des contrats déposés entre les générations.
             </p>
-            <p className="text-[15px] leading-[1.9] text-ink-soft">
+            <p className="body-text">
               Nous travaillons avec trois ateliers. Un à Jérusalem pour le
               laiton, un à Milan pour le bronze coulé, un à Florence pour
               l'argent. Chaque pièce sort d'une main que nous connaissons.
@@ -83,10 +83,10 @@ function About() {
           <div className="grid gap-16 md:grid-cols-4">
             {VALUES.map((v, i) => (
               <Reveal key={v.t} delay={i * 120}>
-                <div className="font-display text-[14px] tracking-[0.32em] text-brass-deep">
+                <div className="font-display text-[14px] tracking-[0.18em] text-brass-deep">
                   — {v.n}
                 </div>
-                <h3 className="mt-8 font-display text-[28px] leading-tight text-ink">
+                <h3 className="heading-card mt-8 text-[28px] text-ink">
                   {v.t}
                 </h3>
                 <p className="mt-6 text-[14px] leading-[1.75] text-ink-soft">
@@ -112,7 +112,7 @@ function About() {
       <section className="mx-auto max-w-[900px] px-6 py-32 text-center md:py-48">
         <Reveal>
           <div className="eyebrow">Signature</div>
-          <p className="mt-10 font-display text-[28px] italic leading-[1.4] text-ink md:text-[36px]">
+          <p className="mt-10 font-display text-[28px] italic leading-[1.4] tracking-[-0.01em] text-ink md:text-[36px]">
             « Nous ne fabriquons pas des objets religieux.
             <br />
             Nous fabriquons ce qui restera,
