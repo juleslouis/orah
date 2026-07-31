@@ -62,19 +62,19 @@ function Hero() {
       <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-6 pb-24 pt-40 md:px-12 md:pb-32">
         <div className="max-w-2xl reveal-slow">
           <div className="eyebrow text-ink-soft">Maison — Fondée 5785</div>
-          <h1 className="mt-8 font-display text-[52px] leading-[0.98] tracking-[-0.02em] text-ink md:text-[92px]">
+          <h1 className="heading-hero mt-8 text-[52px] text-ink md:text-[92px]">
             La lumière
             <br />
             <span className="italic text-ink-soft">qui se transmet.</span>
           </h1>
-          <p className="mt-8 max-w-md text-base leading-relaxed text-ink-soft md:text-[17px]">
+          <p className="body-text mt-8 max-w-md md:text-[17px]">
             Une maison contemporaine d'objets rituels. Orfèvrerie de
             transmission, faite pour trois générations.
           </p>
           <div className="mt-12 flex flex-wrap items-center gap-8">
             <Link
               to="/collection"
-              className="group inline-flex items-center gap-4 border-b border-ink/60 pb-2 text-[11px] uppercase tracking-[0.28em] text-ink transition-colors hover:text-brass-deep hover:border-brass-deep"
+              className="label group inline-flex items-center gap-4 border-b border-ink/60 pb-2 text-ink transition-colors hover:text-brass-deep hover:border-brass-deep"
             >
               Découvrir la collection
               <span className="transition-transform duration-700 group-hover:translate-x-2">
@@ -83,7 +83,7 @@ function Hero() {
             </Link>
             <Link
               to="/about"
-              className="link-underline text-[11px] uppercase tracking-[0.28em] text-ink-muted hover:text-ink"
+              className="link-underline label text-ink-muted hover:text-ink"
             >
               La maison
             </Link>
@@ -91,7 +91,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-[10px] uppercase tracking-[0.32em] text-ink-muted flicker">
+      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-[10px] uppercase tracking-[0.18em] text-ink-muted flicker">
         Scroll
       </div>
     </section>
@@ -114,7 +114,7 @@ function Announcement() {
         {doubled.map((t, i) => (
           <span
             key={i}
-            className="mx-10 shrink-0 text-[11px] uppercase tracking-[0.32em] text-ink-muted"
+            className="mx-10 shrink-0 text-[11px] uppercase tracking-[0.18em] text-ink-muted"
           >
             {t} <span className="ml-10 text-brass">✦</span>
           </span>
@@ -131,7 +131,7 @@ function Manifesto() {
         <div className="eyebrow">Manifeste — I</div>
       </Reveal>
       <Reveal delay={120}>
-        <h2 className="mt-10 font-display text-[36px] leading-[1.1] tracking-[-0.015em] text-ink md:text-[64px]">
+        <h2 className="heading-section mt-10 text-[36px] text-ink md:text-[64px]">
           Un objet rituel ne se choisit pas
           <br />
           <span className="italic text-ink-soft">comme un accessoire.</span>
@@ -141,13 +141,13 @@ function Manifesto() {
       </Reveal>
       <Reveal delay={280}>
         <div className="mt-16 grid gap-16 md:grid-cols-2 md:gap-24">
-          <p className="text-[15px] leading-[1.8] text-ink-soft">
+          <p className="body-text measure-wide">
             Il traverse les mariages, les naissances, les shabbats ordinaires
             et les fêtes qui comptent. Il change de mains sans se briser, il
             gagne à vieillir, il finit par appartenir à la famille davantage
             qu'à celui qui l'a acheté.
           </p>
-          <p className="text-[15px] leading-[1.8] text-ink-soft">
+          <p className="body-text measure-wide">
             ORAH existe parce que ces objets méritent la même exigence que
             l'on réserve à une pièce d'horlogerie ou à un bijou de famille —
             la même main, le même silence, la même lumière. Nous ne
@@ -168,13 +168,13 @@ function IconicPieces() {
           <div className="flex items-end justify-between">
             <div>
               <div className="eyebrow">Pièces iconiques</div>
-              <h2 className="mt-6 font-display text-[36px] leading-[1] tracking-[-0.015em] md:text-[56px]">
+              <h2 className="heading-section mt-6 text-[36px] md:text-[56px]">
                 Trois objets. <span className="italic text-ink-soft">Trois rites.</span>
               </h2>
             </div>
             <Link
               to="/collection"
-              className="hidden md:inline-flex link-underline text-[11px] uppercase tracking-[0.28em] text-ink-soft"
+              className="link-underline label hidden md:inline-flex text-ink-soft"
             >
               Voir la collection ⟶
             </Link>
@@ -200,7 +200,7 @@ function IconicPieces() {
                 <div className="mt-6 flex items-baseline justify-between gap-4">
                   <div>
                     <div className="eyebrow">{p.category}</div>
-                    <h3 className="mt-2 font-display text-[22px] leading-tight text-ink">
+                    <h3 className="heading-card mt-2 text-[22px] text-ink">
                       {p.name}
                     </h3>
                   </div>
@@ -234,12 +234,12 @@ function Atelier() {
           <Reveal>
             <div className="max-w-md">
               <div className="eyebrow">Les ateliers</div>
-              <h2 className="mt-8 font-display text-[36px] leading-[1.05] tracking-[-0.015em] md:text-[48px]">
+              <h2 className="heading-section mt-8 text-[36px] md:text-[48px]">
                 Trois ateliers.
                 <br />
                 <span className="italic text-ink-soft">Une seule main.</span>
               </h2>
-              <p className="mt-8 text-[15px] leading-[1.8] text-ink-soft">
+              <p className="body-text mt-8">
                 Chaque pièce est confiée à l'un de nos trois ateliers
                 partenaires — Jérusalem, Milan, Florence. Une chaîne courte,
                 choisie pour l'exigence du geste plutôt que pour l'échelle
@@ -247,7 +247,7 @@ function Atelier() {
               </p>
               <Link
                 to="/about"
-                className="mt-12 inline-flex items-center gap-4 border-b border-ink/60 pb-2 text-[11px] uppercase tracking-[0.28em] text-ink hover:text-brass-deep hover:border-brass-deep transition-colors"
+                className="label mt-12 inline-flex items-center gap-4 border-b border-ink/60 pb-2 text-ink hover:text-brass-deep hover:border-brass-deep transition-colors"
               >
                 Notre méthode ⟶
               </Link>
@@ -266,12 +266,12 @@ function Ritual() {
         <div className="md:col-span-5">
           <Reveal>
             <div className="eyebrow">Journal — Extrait</div>
-            <h3 className="mt-8 font-display text-[32px] leading-[1.1] tracking-[-0.015em] md:text-[44px]">
+            <h3 className="heading-section mt-8 text-[32px] md:text-[44px]">
               La mezouza,
               <br />
               <span className="italic text-ink-soft">seuil et promesse.</span>
             </h3>
-            <p className="mt-8 text-[15px] leading-[1.8] text-ink-soft">
+            <p className="body-text mt-8">
               Ce n'est pas un objet décoratif. C'est un contrat déposé sur
               le montant de la porte — une trace visible d'une promesse
               intérieure. Chaque foyer en porte une. Chaque enfant, un jour,
@@ -279,7 +279,7 @@ function Ritual() {
             </p>
             <Link
               to="/journal"
-              className="mt-12 inline-block link-underline text-[11px] uppercase tracking-[0.28em] text-ink"
+              className="link-underline label mt-12 inline-block text-ink"
             >
               Lire le journal
             </Link>
@@ -327,7 +327,7 @@ function Press() {
           {quotes.map((q, i) => (
             <Reveal key={i} delay={i * 120}>
               <figure className="mx-auto max-w-sm text-center">
-                <blockquote className="font-display text-[22px] italic leading-[1.35] text-ink md:text-[24px]">
+                <blockquote className="font-display text-[22px] italic leading-[1.35] tracking-[-0.01em] text-ink md:text-[24px]">
                   “{q.q}”
                 </blockquote>
                 <figcaption className="mt-8 eyebrow">— {q.s}</figcaption>
@@ -345,12 +345,12 @@ function Correspondance() {
     <section className="mx-auto max-w-[900px] px-6 py-32 text-center md:py-48">
       <Reveal>
         <div className="eyebrow">Correspondance</div>
-        <h2 className="mt-10 font-display text-[36px] leading-[1.1] tracking-[-0.015em] md:text-[56px]">
+        <h2 className="heading-section mt-10 text-[36px] md:text-[56px]">
           Recevez notre journal,
           <br />
           <span className="italic text-ink-soft">quatre fois par an.</span>
         </h2>
-        <p className="mx-auto mt-8 max-w-lg text-[15px] leading-[1.8] text-ink-soft">
+        <p className="body-text mx-auto mt-8 max-w-lg">
           Aucune promotion. Aucune annonce commerciale. Uniquement la
           lumière, l'objet, et le geste.
         </p>
@@ -366,7 +366,7 @@ function Correspondance() {
           />
           <button
             type="submit"
-            className="ml-4 eyebrow text-ink hover:text-brass-deep transition-colors"
+            className="eyebrow ml-4 text-ink hover:text-brass-deep transition-colors"
           >
             Envoyer
           </button>
