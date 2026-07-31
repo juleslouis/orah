@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Maison de Judaïca contemporaine. Objets d'orfèvrerie rituelle, pensés pour la transmission.",
+          "Maison de Judaïca contemporaine. Objets rituels d'orfèvrerie — hanoukkia, mezouza, kiddouch. Conçus avec l'exigence du grand luxe, validés par autorité rabbinique.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
