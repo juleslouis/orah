@@ -60,8 +60,7 @@ export function SiteNav({ overlay = false }: { overlay?: boolean } = {}) {
             className={`label flex items-center gap-4 justify-self-start ${tone} transition-colors hover:text-brass-deep`}
             aria-label="Ouvrir le menu"
           >
-            <span className="flex flex-col gap-[8px]" aria-hidden>
-              <span className="block h-[2px] w-8 bg-current" />
+            <span className="flex flex-col gap-[9px]" aria-hidden>
               <span className="block h-[2px] w-8 bg-current" />
               <span className="block h-[2px] w-8 bg-current" />
             </span>
